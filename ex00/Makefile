@@ -87,7 +87,8 @@ leak: $(shell uname)_leak
 ##############
 
 test: all
-	./$(NAME)
+	./$(NAME) > out
+	diff -y -W80 expect out
 
 ##########
 # Colors #
