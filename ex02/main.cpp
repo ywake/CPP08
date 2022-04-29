@@ -42,14 +42,24 @@ int main()
   mstack.push(0);
   log("push", mstack);
 
+  log("iterator", mstack);
   MutantStack<int>::iterator it = mstack.begin();
   MutantStack<int>::iterator ite = mstack.end();
-
   ++it;
   --it;
   while (it != ite) {
     std::cout << *it << std::endl;
     ++it;
+  }
+
+  log("reverse_iterator", mstack);
+  MutantStack<int>::reverse_iterator rit = mstack.rbegin();
+  MutantStack<int>::reverse_iterator rite = mstack.rend();
+  ++rit;
+  --rit;
+  while (rit != rite) {
+    std::cout << *rit << std::endl;
+    ++rit;
   }
 
   std::cout << "\nstd::stack" << std::endl;

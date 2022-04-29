@@ -44,13 +44,13 @@ public:
    */
   iterator begin() { return this->c.begin(); }
   iterator end() { return this->c.end(); }
-  iterator rbegin() { return this->c.rbegin(); }
-  iterator rend() { return this->c.rend(); }
+  reverse_iterator rbegin() { return this->c.rbegin(); }
+  reverse_iterator rend() { return this->c.rend(); }
 
   const_iterator begin() const { return this->c.begin(); }
   const_iterator end() const { return this->c.end(); }
-  const_iterator rbegin() const { return this->c.rbegin(); }
-  const_iterator rend() const { return this->c.rend(); }
+  const_reverse_iterator rbegin() const { return this->c.rbegin(); }
+  const_reverse_iterator rend() const { return this->c.rend(); }
 };
 
 #endif /* MUTANTSTACK_HPP */
