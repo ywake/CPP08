@@ -13,6 +13,12 @@ int main(void)
 
   std::vector<int> const constVec(vec);
   std::cout << *easyfind(vec, 1) << std::endl;
+  try {
+    std::cout << "easyfind(vec, 42) : ";
+    easyfind(vec, 42);
+  } catch (const std::exception &e) {
+    std::cout << e.what() << std::endl;
+  }
 
   std::list<int> lst;
   for (size_t i = 0; i < 4; i++) {
