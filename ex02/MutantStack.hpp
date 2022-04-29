@@ -21,7 +21,7 @@ public:
    * Constructor/Destructor
    */
   MutantStack() : std::stack<T>() {}
-  MutantStack(MutantStack const &copy) { *this = copy; }
+  MutantStack(MutantStack const &copy) : std::stack<T>() { *this = copy; }
   ~MutantStack() {}
 
   /*
