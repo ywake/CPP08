@@ -11,6 +11,9 @@ int main(void)
   }
   std::cout << *easyfind(vec, 1) << std::endl;
 
+  std::vector<int> const constVec(vec);
+  std::cout << *easyfind(vec, 1) << std::endl;
+
   std::list<int> lst;
   for (size_t i = 0; i < 4; i++) {
     lst.push_back(static_cast<int>(i));
